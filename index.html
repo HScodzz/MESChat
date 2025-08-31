@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MES FAQ Bot</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MES FAQ Bot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+    }
+
+    .header {
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 2px solid #fff;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    #chatbot-container {
+      margin: 50px auto;
+      width: 90%;
+      max-width: 600px;
+      background: white;
+      color: black;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e0e0e0;
+      --df-messenger-user-message: #1e3c72;
+      --df-messenger-button-titlebar-color: #2a5298;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>MES FAQ Chatbot</h1>
+    <p>Ask me anything about MES!</p>
+  </div>
+
+  <div id="chatbot-container">
     <!-- Dialogflow Messenger Chatbot -->
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
@@ -13,6 +62,8 @@
       agent-id="f2d802ff-a166-4e88-85cf-9a0a3f7515c8"
       language-code="en"
     ></df-messenger>
-  </body>
+  </div>
+</body>
 </html>
+
 
