@@ -11,6 +11,7 @@
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
       text-align: center;
+      height: 100vh;
     }
 
     .header {
@@ -30,21 +31,14 @@
       opacity: 0.9;
     }
 
-    #chatbot-container {
-      margin: 50px auto;
-      width: 90%;
-      max-width: 600px;
-      background: white;
-      color: black;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
+    /* Force chatbot to float over background */
     df-messenger {
       --df-messenger-bot-message: #e0e0e0;
       --df-messenger-user-message: #1e3c72;
       --df-messenger-button-titlebar-color: #2a5298;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
     }
   </style>
 </head>
@@ -54,16 +48,13 @@
     <p>Ask me anything about MES!</p>
   </div>
 
-  <div id="chatbot-container">
-    <!-- Dialogflow Messenger Chatbot -->
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      chat-title="MESFAQBot"
-      agent-id="f2d802ff-a166-4e88-85cf-9a0a3f7515c8"
-      language-code="en"
-    ></df-messenger>
-  </div>
+  <!-- Dialogflow Messenger Chatbot -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    chat-title="MESFAQBot"
+    agent-id="f2d802ff-a166-4e88-85cf-9a0a3f7515c8"
+    language-code="en"
+  ></df-messenger>
 </body>
 </html>
-
 
